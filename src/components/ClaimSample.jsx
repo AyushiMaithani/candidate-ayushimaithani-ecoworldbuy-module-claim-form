@@ -12,6 +12,7 @@ function ClaimSample() {
   const [message, setMessage] = useState(null);
 
   const emailIsValid = (email) => /\S+@\S+\.\S+/.test(email);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const handleSampleSubmit = async (e) => {
     e.preventDefault();
@@ -30,7 +31,7 @@ function ClaimSample() {
     setMessage(null);
 
     try {
-      const res = await fetch('api/claim-sample', {
+      const res = await fetch(`${apiUrl}claim-sample`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -84,7 +85,7 @@ function ClaimSample() {
           required
         />
         <input
-          type="text"
+          type="text"s
           placeholder="Shipping Address"
           value={sampleForm.shippingAddress}
           onChange={(e) => setSampleForm({ ...sampleForm, shippingAddress: e.target.value })}

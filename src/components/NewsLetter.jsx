@@ -38,7 +38,7 @@ const Newsletter = () => {
     setStatus(null);
 
     try {
-      const res = await fetch(`${apiUrl}/api/printful-products`, {
+      const res = await fetch(`${apiUrl}subscribe-newsletter`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
