@@ -9,7 +9,6 @@ const Newsletter = () => {
   const [errors, setErrors] = useState({});
 
   const emailIsValid = (email) => /\S+@\S+\.\S+/.test(email);
-    const apiUrl = import.meta.env.VITE_API_URL;
 
   const validate = () => {
     const newErrors = {};
@@ -38,7 +37,7 @@ const Newsletter = () => {
     setStatus(null);
 
     try {
-      const res = await fetch(`${apiUrl}subscribe-newsletter`, {
+      const res = await fetch(`subscribe-newsletter`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -5,11 +5,10 @@ import Card from './Card';
 
 const CardList = () => {
   const [products, setProducts] = useState([]);
-  const apiUrl = import.meta.env.VITE_API_URL;
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`${apiUrl}printful-products`);
+        const response = await axios.get(`https://candidate-ayushimaithani-ecoworldbuy.onrender.com/api/printful-products`);
         console.log(response.data);
         setProducts(response.data);
       } catch (error) {
