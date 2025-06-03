@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.text-primary-500 {
+  color: #4CAF50;
+}
+
+.bg-primary-500 {
+  background-color: #4CAF50;
+}
+
+.border-primary-500 {
+  border-color: #4CAF50;
+}
+
+.text-accent-500 {
+  color: #2196F3;
+}
+
+.bg-accent-500 {
+  background-color: #2196F3;
+}
+
+.border-accent-500 {
+  border-color: #2196F3;
+}
